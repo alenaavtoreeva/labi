@@ -33,7 +33,7 @@ def move():
     head.move(aim)
 
     if not inside(head) or head in snake:
-        square(head.x, head.y, 9, 'red')
+        square(head.x, head.y, 9, 'blue')
         update()
         return
 
@@ -49,9 +49,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, 'green')
 
-    square(food.x, food.y, 9, 'green')
+    square(food.x, food.y, 9, 'red')
     update()
     ontimer(move, 100)
 
