@@ -28,7 +28,6 @@ def z2():
         def describe_restaurant(self):
             print(f'Название: {self.restaurant_name} Тип кухни: {self.cuisine_type}')
 
-
     class IceCreamStand(Restaurant):
         def __init__(self,restaurant_name, cuisine_type, flavors, loc, time):
             super().__init__(restaurant_name, cuisine_type)
@@ -76,7 +75,7 @@ def z3():
     class IceCreamStand:
         def __init__(self):
             self.names = ['Как раньше', 'Ekzo', 'Коровка из Кореновки', 'Свитлогорье', 'Даша', 'Золотая трубочка']
-            self.types = ['пломбир', 'эскимо', 'стаканчик', 'пломбир', 'брикет', 'рожок']
+            self.types = ['Пломбир', 'Эскимо', 'Стаканчик', 'Пломбир', 'Брикет', 'Рожок']
 
         def get_names(self):
             return self.names
@@ -90,23 +89,17 @@ def z3():
             master.title("Ice Cream Stand")
 
             self.ice_cream_stand = IceCreamStand()
-
-            self.names_label = tk.Label(master, text='Название', font='Calibri 12 bold')
-
+            self.names_label = tk.Label(master, text='Название', font='Calibri 12 italic bold')
             self.names_listbox = tk.Listbox(master, font='Calibri 12', height=len(self.ice_cream_stand.get_names()))
 
             for name in self.ice_cream_stand.get_names():
                 self.names_listbox.insert(tk.END, name)
 
-            self.types_label = tk.Label(master, text='Вид', font='Calibri 12 bold')
-
+            self.types_label = tk.Label(master, text='Вид', font='Calibri 12 italic bold')
             self.types_listbox = tk.Listbox(master, font='Calibri 12', height=len(self.ice_cream_stand.get_types()))
 
             for type in self.ice_cream_stand.get_types():
                 self.types_listbox.insert(tk.END, type)
-
-
-
 
             self.names_label.grid(row=0, column=0)
             self.names_listbox.grid(row=1, column=0)
@@ -117,4 +110,4 @@ def z3():
     a = IceCreamStandGUI(root)
     root.mainloop()
 
-z2()
+z3()
